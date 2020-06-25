@@ -1,3 +1,5 @@
+require 'pry'
+
 class Application 
   
   def call(env)
@@ -6,6 +8,7 @@ class Application
     time = Time.new
     
     if time.localtime.hour <= 12
+      binding.pry
       resp.write "Good Morning!"
       else
       resp.write "Good Afternoon!"
